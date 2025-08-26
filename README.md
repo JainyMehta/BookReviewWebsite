@@ -11,7 +11,7 @@ A simple **Book Review Website** built using **Node.js, Express, EJS, HTML, and 
 * Sort books as per date, rating and name
 * Structured and reusable **EJS templates**
 * Responsive UI with custom CSS
-* Static images for book covers from https://openlibrary.org/dev/docs/api/covers
+* Utilized external API https://openlibrary.org/dev/docs/api/covers to get image of Book Covers
 
 ## 🛠️ Tech Stack
 
@@ -69,7 +69,7 @@ BookReview/
     dateofcompletion date,
     feedback text,
     ratings integer,
-    olid text ,
+    isbn text,
     CONSTRAINT book_pkey PRIMARY KEY (id)
     )
    ```
