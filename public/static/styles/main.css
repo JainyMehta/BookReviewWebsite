@@ -340,7 +340,7 @@ textarea {
   cursor: pointer;
 }
 
-#olid {
+#isbn {
   border: 2px solid #223148;
   border-radius: 10px;
   width: 100%;
@@ -354,7 +354,7 @@ textarea {
   color: #223148;
 }
 
-.rating-olid {
+.rating-isbn {
   display: flex;
   gap: 80px;
   align-items: center;
@@ -493,7 +493,7 @@ textarea {
     margin: 0px;
   }
 
-  .rating-olid {
+  .rating-isbn {
     gap: 40px;
   }
 
@@ -532,7 +532,7 @@ textarea {
     padding: 60px 20px;
   }
 
-  .rating-olid {
+  .rating-isbn {
     flex-direction: column;
     gap: 40px;
   }

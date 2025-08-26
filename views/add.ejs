@@ -1,29 +1,55 @@
 <%- include('./partials/header.ejs') %>
-<section id = "form">
-    <form action="/add" method="post">
-        <div>
-            <input type="text" id="inputTitle" name="title" placeholder="Book Title"/>
-        </div>
-        <div class="more-details">
-            <input type="text" id="inputAuthor" name="author" placeholder="Author">
-            <input type="date" id="inputDate" name="dateOfCompletion" placeholder="Date of Completion">
-        </div>
-        <div>
-            <textarea name="feedback" id="feedback" placeholder="Feedback" cols="30" rows="10"></textarea>
-            
-        </div>
-        <div class="rating-olid">
-            <div class="rating-stars">
-                <input type="hidden" id="rating" name="rating" value="0">
-                <% for(let i = 1; i<=5; i++){ %>
-                    <svg width="31" height="31" id="star<%= i %>" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5 3.23607L18.0289 11.0193L18.2534 11.7102H18.98H27.1637L20.5429 16.5205L19.9551 16.9476L20.1796 17.6385L22.7086 25.4217L16.0878 20.6115L15.5 20.1844L14.9122 20.6115L8.29144 25.4217L10.8204 17.6385L11.0449 16.9476L10.4571 16.5205L3.83631 11.7102H12.02H12.7466L12.9711 11.0193L15.5 3.23607Z" stroke="#FFD700" stroke-width="2"/>
-                    </svg>    
-                <% } %>
-            </div>
-            <input type="text" id="olid" name="olid" placeholder="Open Library Id">
-            <input type="submit" value="Submit" class="btn btn-success">
-        </div>
-    </form>
+<section id="form">
+  <form action="/add" method="post">
+    <div>
+      <input
+        type="text"
+        id="inputTitle"
+        name="title"
+        placeholder="Book Title"
+      />
+    </div>
+    <div class="more-details">
+      <input type="text" id="inputAuthor" name="author" placeholder="Author" />
+      <input
+        type="date"
+        id="inputDate"
+        name="dateOfCompletion"
+        placeholder="Date of Completion"
+      />
+    </div>
+    <div>
+      <textarea
+        name="feedback"
+        id="feedback"
+        placeholder="Feedback"
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+    <div class="rating-isbn">
+      <div class="rating-stars">
+        <input type="hidden" id="rating" name="rating" value="0" />
+        <% for(let i = 1; i<=5; i++){ %>
+        <svg
+          width="31"
+          height="31"
+          id="star<%= i %>"
+          viewBox="0 0 31 29"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 3.23607L18.0289 11.0193L18.2534 11.7102H18.98H27.1637L20.5429 16.5205L19.9551 16.9476L20.1796 17.6385L22.7086 25.4217L16.0878 20.6115L15.5 20.1844L14.9122 20.6115L8.29144 25.4217L10.8204 17.6385L11.0449 16.9476L10.4571 16.5205L3.83631 11.7102H12.02H12.7466L12.9711 11.0193L15.5 3.23607Z"
+            stroke="#FFD700"
+            stroke-width="2"
+          />
+        </svg>
+        <% } %>
+      </div>
+      <input type="text" id="isbn" name="isbn" placeholder="ISBN Number" />
+      <input type="submit" value="Submit" class="btn btn-success" />
+    </div>
+  </form>
 </section>
 <%- include('./partials/footer.ejs') %>
