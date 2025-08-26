@@ -1,0 +1,77 @@
+<footer>
+    <div class="footer-content">
+        <div class="Copyright">
+            <p>
+            &copy; Copyright - 2024 | All Rights Reserved
+            </p>
+        </div>
+    </div>
+        <div id="socialMediaLinksFooter">
+            <div class="img-box">
+                <img id="footer-img" src="./static/assests/girl.png" alt="">
+            </div>
+        </div>
+</footer>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    function handler(){
+        document.getElementById("menu-btn").setAttribute("hidden", true);
+        document.getElementById('menu').removeAttribute('hidden');
+    }
+
+    function handler2(){
+        document.getElementById('menu').setAttribute('hidden', 'true');
+        document.getElementById("menu-btn").removeAttribute('hidden');
+    }
+
+    document.querySelector('#star1').addEventListener('click', function (){
+        document.querySelector('#star1 path').setAttribute("fill", "#FFD700");
+        for(let i = 2; i<=5; i++){
+            document.querySelector('#star'+i+" path").removeAttribute("fill");
+        }
+        document.querySelector("#rating").value = "1";
+    });
+
+    document.querySelector('#star2').addEventListener('click', function (){
+        for(let i = 1; i<=2; i++){
+            document.querySelector("#star"+i+" path").setAttribute("fill", "#FFD700");
+        }
+        
+        for(let i = 3; i<=5; i++){
+            document.querySelector('#star'+i+" path").removeAttribute("fill");
+        }
+        document.querySelector("#rating").value = "2";
+    });
+
+    document.querySelector('#star3').addEventListener('click', function (){
+        for(let i = 1; i<=3; i++){
+            document.querySelector("#star"+i+" path").setAttribute("fill", "#FFD700");
+        }
+        
+        for(let i = 4; i<=5; i++){
+            document.querySelector('#star'+i+" path").removeAttribute("fill");
+        }
+        document.querySelector("#rating").value = "3";
+    });
+
+    document.querySelector('#star4').addEventListener('click', function (){
+        for(let i = 1; i<=4; i++){
+            document.querySelector("#star"+i+" path").setAttribute("fill", "#FFD700");
+        }
+        
+        for(let i = 5; i<=5; i++){
+            document.querySelector('#star'+i+" path").removeAttribute("fill");
+        }
+        document.querySelector("#rating").value = "4";
+    });
+
+    document.querySelector('#star5').addEventListener('click', function (){
+        for(let i = 1; i<=5; i++){
+            document.querySelector("#star"+i+" path").setAttribute("fill", "#FFD700");
+        }
+        document.querySelector("#rating").value = "5";
+    });
+</script>
+</body>
+</html>

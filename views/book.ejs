@@ -1,0 +1,38 @@
+<%- include('./partials/header.ejs') %>
+<section id="book-details">
+  <div class="book-container-L">
+    <div>
+      <img
+        class="book-cover-L"
+        src="https://covers.openlibrary.org/b/olid/<%= book.olid %>-L.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <h1 class="btitle"><%= book.title %></h1>
+      <br />
+      <p class="bauthor">Author: <%= book.author %></p>
+      <br />
+      <p class="bfeedback">Feedback:<br /><%= book.feedback %></p>
+      <br />
+      <div class="btns">
+        <a href="/edit?id=<%= book.id %>" class="btn btn-warning">Edit</a>
+        <button onclick="deleteAttempt()" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function deleteAttempt() {
+      let userKey = confirm("Do want to delete this book review?");
+      console.log(userKey);
+      if (userKey == true) {
+        console.log();
+        alert("This book is deleted");
+        window.location.href = "/delete?id=<%= book.id %>";
+      } else {
+        alert("Unauthorized Access Denied");
+      }
+    }
+  </script>
+</section>
+<%- include('./partials/footer.ejs') %>
